@@ -1,0 +1,4 @@
+select transaction_dt, amount, category, count(*) as qty
+from financial
+group by transaction_dt, amount, category having count(*) > 1
+
